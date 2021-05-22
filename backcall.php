@@ -5,7 +5,7 @@ $result = [];
 $httpState = '';
 
 $cb = new Backcall;
-if($_POST['phone']) {
+if(isset($_POST['phone'])) {
     $q = trim($_POST['phone']);
     $send = $cb->SendData($q);
 
