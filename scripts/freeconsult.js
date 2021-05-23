@@ -24,7 +24,7 @@ const FCSend = (e,t) => {
         success: function (response) {
             res = JSON.parse(response);
 
-            if (res.result == "OkForm") {
+            if (res['result'] == "OkForm") {
                 autoNotification(0);
                 point.val('');
                 point.removeProp('disabled');
@@ -34,7 +34,7 @@ const FCSend = (e,t) => {
         error: function (response) {
             res = JSON.parse(response);
 
-            if (res.result == "ErrorForm") {
+            if (res['result'] == "ErrorForm") {
                 autoNotification(1);
                 point.removeProp('disabled');
             }
