@@ -1,7 +1,6 @@
 <?php
-include('../service.php');
 
-class FreeConsultRegister implements iLanding {
+class FreeConsultRegister {
     public function SendData($query) {
        date_default_timezone_set('Europe/Moscow');
        $mailData = [

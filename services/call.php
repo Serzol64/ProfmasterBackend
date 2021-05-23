@@ -1,7 +1,7 @@
 <?php
-include('../service.php');
 
-class Backcall implements iLanding {
+
+class Backcall {
     public function SendData($query) {
        date_default_timezone_set('Europe/Moscow');
        $mailData = [
