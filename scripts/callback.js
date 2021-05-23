@@ -32,19 +32,20 @@ const CallBackOpen = (e, t) => {
 const CallBackClose = (e, t) => {
     lb.addClass("lb_closed");
 }
-const CBFSend = () => {
+const CBFSend = (e,t) => {
     let res = null;
     let points = [
         $('#callback-lightbox > .lb-h .lb_close'),
         $('#callback-lightbox > .lb main form div input, #callback-lightbox > .lb main form div button'),
         $('#callback-lightbox > .lb main form div input')
     ],
-        data = "phone=" + $('phone').val();
+        query = {phone: $('phone').val()};
 
     $.ajax({
-        type: this.method,
-        url: this.action,
-        data: data,
+        type: $(this).attr('method'),
+        url: $(this).attr('action'),
+        dataType: 'json',
+        data: query,
         beforeSend: function () {
             points[1].prop('disabled','');
         },
