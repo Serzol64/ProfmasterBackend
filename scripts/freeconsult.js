@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    $('form#form308189190').prop("action", "http://f0544597.xsph.ru/aplex/profmasterLanding/freeconsultation.php");
     $('#rec308189190 .tn-elem[data-elem-id="1619273197872"], #rec308189190 .tn-elem[data-elem-id="1619273074469"]').click(StartSend);
     $('form#form308189190').submit(FCSend);
 });
@@ -15,7 +14,7 @@ const FCSend = (e,t) => {
 
     $.ajax({
         type: $(this).attr('method'),
-        url: $(this).attr('action'),
+        url: "http://f0544597.xsph.ru/aplex/profmasterLanding/freeconsultation.php",
         dataType: 'json',
         data: query,
         beforeSend: function () {
