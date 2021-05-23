@@ -49,8 +49,8 @@ const CBFSend = (e,t) => {
         beforeSend: function () {
             points[1].prop('disabled','');
         },
-        success: function (response) {
-            res = JSON.parse(response);
+        success: function (data) {
+            res = JSON.parse(data);
 
             if (res['result'] == "OkSend") {
                 autoNotification(0);
@@ -60,14 +60,10 @@ const CBFSend = (e,t) => {
 
             }
         },
-        error: function (response) {
-            res = JSON.parse(response);
-
-            if (res['result'] == "ErrorSend") {
-                autoNotification(1);
-                points[0].trigger('click');
-                points[1].removeProp('disabled');
-            }
+        error: function () {
+            autoNotification(1);
+            points[0].trigger('click');
+            points[1].removeProp('disabled');
         }
     });
 
