@@ -1,5 +1,5 @@
 <?php
-include_once('services/customer.php');
+include('services/customer.php');
 $result = [];
 $httpState = '';
 

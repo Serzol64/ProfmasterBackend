@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('form#form308189190').attr("action", "http://l9198241.beget.tech/aplex/profmasterLanding/freeconsultation.php");
+    $('form#form308189190').attr("action", "http://f0544597.xsph.ru/aplex/profmasterLanding/freeconsultation.php");
     $('#rec308189190 .tn-elem[data-elem-id="1619273197872"], #rec308189190 .tn-elem[data-elem-id="1619273074469"]').click(StartSend);
     $('form#form308189190').submit(FCSend);
 });

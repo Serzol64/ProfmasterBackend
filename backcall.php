@@ -1,5 +1,5 @@
 <?php
-include_once('services/call.php');
+include('services/call.php');
 
 $result = [];
 $httpState = '';

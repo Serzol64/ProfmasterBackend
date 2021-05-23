@@ -1,5 +1,5 @@
 <?php
-include_once('../service.php');
+include('../service.php');
 
 class FreeConsultRegister implements iLanding {
     public function SendData($query) {
