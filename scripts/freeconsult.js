@@ -24,7 +24,7 @@ const FCSend = (e,t) => {
         success: function (data) {
             res = JSON.parse(data);
 
-            if (res.result == "OkForm") {
+            if (res.result.toString() == "OkForm") {
                 autoNotification(0);
                 point.val('');
                 point.removeProp('disabled');
