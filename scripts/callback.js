@@ -5,5 +5,6 @@ $(document).ready(function () {
 
 const CallBackOpen = (e, t) => {
     jivo_api.open({ start : 'call'});
+    e.preventDefault();
 }
 
