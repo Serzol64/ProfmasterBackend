@@ -42,8 +42,8 @@ const CBFSend = (e,t) => {
         query = {phone: $('phone').val()};
 
     $.ajax({
-        type: $(this).attr('method'),
-        url: $(this).attr('action'),
+        type: "POST",
+        url: "http://f0544597.xsph.ru/aplex/profmasterLanding/backcall.php",
         dataType: 'json',
         data: query,
         beforeSend: function () {
