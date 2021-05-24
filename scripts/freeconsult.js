@@ -14,7 +14,7 @@ const FCSend = (e,t) => {
 
     console.log("Ready:" + $('form#form308189190').attr('method'));
     $.ajax({
-        type: $('form#form308189190').attr('method'),
+        type: "GET",
         url: "http://f0544597.xsph.ru/aplex/profmasterLanding/freeconsultation.php",
         dataType: 'json',
         data: query,
