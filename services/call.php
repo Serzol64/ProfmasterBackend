@@ -18,7 +18,7 @@ class Backcall {
        if($send){ return ['type' => 'success','response' => $this->Success(0)]; }
        else{ return ['type' => 'problem','response' => $this->Success(1)]; }
     }
-    public function Success($code) {
+    private function Success($code) {
         $status = NULL;
 
         switch ($code) {

@@ -18,7 +18,7 @@ class FreeConsultRegister {
        else{ return ['type' => 'problem','response' => $this->Success(1)]; }
 
     }
-    public function Success($code) {
+    private function Success($code) {
         $status = NULL;
 
         switch ($code) {
