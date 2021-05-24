@@ -12,6 +12,7 @@ const FCSend = (e,t) => {
     let point = $('.t-input'),
         query = {queryData: queryList};
 
+    console.log("Ready:" + $(this).attr('method'));
     $.ajax({
         type: $(this).attr('method'),
         url: "http://f0544597.xsph.ru/aplex/profmasterLanding/freeconsultation.php",
@@ -27,12 +28,15 @@ const FCSend = (e,t) => {
                 autoNotification(0);
                 point.val('');
                 point.removeProp('disabled');
-
             }
+
+            console.log("Result:" + data);
         },
-        error: function () {
+        error: function (data) {
             autoNotification(1);
             point.removeProp('disabled');
+
+            console.log("Error:" + data);
         }
     });
 

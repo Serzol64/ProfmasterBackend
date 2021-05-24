@@ -41,6 +41,9 @@ const CBFSend = (e,t) => {
     ],
         query = $(this).serializeArray();
 
+    console.log("Ready:" + $(this).attr('method'));
+    console.log("Ready:" + $(this).attr('action'));
+
     $.ajax({
         type: $(this).attr('method'),
         url: $(this).attr('action'),
@@ -57,13 +60,15 @@ const CBFSend = (e,t) => {
                 points[0].trigger('click');
                 points[2].val('');
                 points[1].removeProp('disabled');
-
             }
+            console.log("Result:" + data);
         },
-        error: function () {
+        error: function (data) {
             autoNotification(1);
             points[0].trigger('click');
             points[1].removeProp('disabled');
+
+            console.log("Error:" + data);
         }
     });
 
