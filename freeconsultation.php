@@ -5,8 +5,8 @@ $httpState = '';
 
 $cb = new FreeConsultRegister;
 
-if($_POST['queryData']) {
-    $q = json_decode($_POST['queryData']);
+if($_REQUEST['queryData']) {
+    $q = json_decode($_REQUEST['queryData']);
 
     $send = $cb->SendData($q);
 
