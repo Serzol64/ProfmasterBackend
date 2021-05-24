@@ -1,6 +1,6 @@
 <?php
 include('services/customer.php');
-$result = array();
+$result = [];
 $httpState = '';
 
 $cb = new FreeConsultRegister;
