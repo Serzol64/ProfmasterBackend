@@ -53,9 +53,9 @@ const CBFSend = (e,t) => {
             points[1].prop('disabled','');
         },
         success: function (data) {
-            res = $.parseJSON(data);
+            res = JSON.parse(data);
 
-            if (res['result'] === "OkSend") {
+            if (res['result'] == "OkSend") {
                 autoNotification(0);
                 points[0].trigger('click');
                 points[2].val('');

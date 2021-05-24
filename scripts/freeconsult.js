@@ -22,7 +22,7 @@ const FCSend = (e,t) => {
             point.prop('disabled','');
         },
         success: function (data) {
-            res = $.parseJSON(data);
+            res = JSON.parse(data);
 
             if (res['result'] == "OkForm") {
                 autoNotification(0);
