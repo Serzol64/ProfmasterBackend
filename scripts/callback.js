@@ -55,7 +55,7 @@ const CBFSend = (e,t) => {
         success: function (data) {
             res = JSON.parse(data);
 
-            if (res['result'] == "OkSend") {
+            if (res.result == "OkSend") {
                 autoNotification(0);
                 points[0].trigger('click');
                 points[2].val('');
