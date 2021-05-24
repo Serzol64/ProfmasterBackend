@@ -12,9 +12,9 @@ const FCSend = (e,t) => {
     let point = $('.t-input'),
         query = {queryData: queryList};
 
-    console.log("Ready:" + $(this).attr('method'));
+    console.log("Ready:" + $('form#form308189190').attr('method'));
     $.ajax({
-        type: $(this).attr('method'),
+        type: $('form#form308189190').attr('method'),
         url: "http://f0544597.xsph.ru/aplex/profmasterLanding/freeconsultation.php",
         dataType: 'json',
         data: query,

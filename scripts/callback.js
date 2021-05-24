@@ -39,14 +39,14 @@ const CBFSend = (e,t) => {
         $('#callback-lightbox > .lb main form div input, #callback-lightbox > .lb main form div button'),
         $('#callback-lightbox > .lb main form div input')
     ],
-        query = $(this).serializeArray();
+        query = $('#callback-lightbox > .lb main form').serializeArray();
 
-    console.log("Ready:" + $(this).attr('method'));
-    console.log("Ready:" + $(this).attr('action'));
+    console.log("Ready:" + $('#callback-lightbox > .lb main form').attr('method'));
+    console.log("Ready:" + $('#callback-lightbox > .lb main form').attr('action'));
 
     $.ajax({
-        type: $(this).attr('method'),
-        url: $(this).attr('action'),
+        type: $('#callback-lightbox > .lb main form').attr('method'),
+        url: $('#callback-lightbox > .lb main form').attr('action'),
         dataType: 'json',
         data: query,
         beforeSend: function () {
