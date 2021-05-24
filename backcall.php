@@ -1,7 +1,7 @@
 <?php
 include('services/call.php');
 
-$result = [];
+$result = array();
 $httpState = '';
 
 $cb = new Backcall;
