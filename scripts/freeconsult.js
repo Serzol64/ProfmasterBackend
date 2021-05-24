@@ -8,7 +8,7 @@ const StartSend = (e, t) => {
 }
 const FCSend = (e,t) => {
     let res = null;
-    const queryList = JSON.stringify($(this).serializeArray());
+    const queryList = JSON.stringify({customer: $('.t-input').eq(0).val(), phone: $('.t-input').eq(1).val()});
     let point = $('.t-input'),
         query = {queryData: queryList};
 
