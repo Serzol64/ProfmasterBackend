@@ -1,4 +1,3 @@
-#rec308189190:hover, .tn-elem[data-elem-id="1619273074425"]:hover{ cursor: pointer; }
 #callback-lightbox{
     background-color: #285363e3;
     color: white;
@@ -8,7 +7,7 @@
     top: 0;
     left: 0;
 }
-#callback-lightbox.lb_closed{ visibility: hidden; }
+#callback-lightbox.lb_closed{ display: none; }
 
 #callback-lightbox > .lb-h{
     padding-top: 2vh;
@@ -89,7 +88,7 @@
     position: fixed;
     z-index: 1;
 }
-#form-send-window.nf-close{ visibility: hidden; }
+#form-send-window.nf-close{ display: none; }
 #form-send-window > header{
     float: left;
     margin-left: 2%;
