@@ -39,7 +39,7 @@ const CBFSend = (e,t) => {
         $('#callback-lightbox > .lb main form div input, #callback-lightbox > .lb main form div button'),
         $('#callback-lightbox > .lb main form div input')
     ],
-        query = {phone: String(points[2].val())};
+        query = {phone: points[2].val()};
 
     $.ajax({
         type: "POST",
