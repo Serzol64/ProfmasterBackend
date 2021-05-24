@@ -55,12 +55,14 @@ const CBFSend = (e,t) => {
         success: function (data) {
             res = JSON.parse(data);
 
-            if (res[0].result == "OkSend") {
-                autoNotification(0);
-                points[0].trigger('click');
-                points[2].val('');
-                points[1].removeProp('disabled');
-            }
+            $.each(res, function (i, data) { 
+                if (data.result == "OkSend") {
+                    autoNotification(0);
+                    points[0].trigger('click');
+                    points[2].val('');
+                    points[1].removeProp('disabled');
+                }
+            });
             console.log("Result:" + data);
         },
         error: function (data) {

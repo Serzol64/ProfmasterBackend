@@ -24,12 +24,13 @@ const FCSend = (e,t) => {
         success: function (data) {
             res = JSON.parse(data);
 
-            if (res[0].result == "OkForm") {
-                autoNotification(0);
-                point.val('');
-                point.removeProp('disabled');
-            }
-
+            $.each(res, function (i, data) { 
+                if (data.result == "OkForm") {
+                    autoNotification(0);
+                    point.val('');
+                    point.removeProp('disabled');
+                }
+            });
             console.log("Result:" + data);
         },
         error: function (data) {
