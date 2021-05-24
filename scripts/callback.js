@@ -21,7 +21,7 @@ const autoNotification = (type) => {
 }
 
 $(document).ready(function () {
-    $('#rec308189190 .tn-elem[data-elem-id="1619273074425"]').click(CallBackOpen);
+    $('#rec308189190, .tn-elem[data-elem-id="1619273074425"]').click(CallBackOpen);
     $('#callback-lightbox > .lb-h .lb_close').click(CallBackClose);
     $('#callback-lightbox > .lb main form').submit(CBFSend);
 });
