@@ -39,11 +39,11 @@ const CBFSend = (e,t) => {
         $('#callback-lightbox > .lb main form div input, #callback-lightbox > .lb main form div button'),
         $('#callback-lightbox > .lb main form div input')
     ],
-        query = {phone: points[2].val()};
+        query = {phone: $('input#phone').val()};
 
     $.ajax({
-        type: "POST",
-        url: "http://f0544597.xsph.ru/aplex/profmasterLanding/backcall.php",
+        type: $(this).attr('method'),
+        url: $(this).attr('action'),
         dataType: 'json',
         data: query,
         beforeSend: function () {
@@ -67,7 +67,7 @@ const CBFSend = (e,t) => {
         }
     });
 
-    return false;
+    e.preventDefault();
 
 }
 

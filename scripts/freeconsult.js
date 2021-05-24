@@ -13,7 +13,7 @@ const FCSend = (e,t) => {
         query = {queryData: queryList};
 
     $.ajax({
-        type: "POST",
+        type: $(this).attr('method'),
         url: "http://f0544597.xsph.ru/aplex/profmasterLanding/freeconsultation.php",
         dataType: 'json',
         data: query,
@@ -36,6 +36,6 @@ const FCSend = (e,t) => {
         }
     });
 
-    return false;
+    e.preventDefault();
 
 }
