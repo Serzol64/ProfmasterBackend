@@ -6,7 +6,7 @@ $httpState = '';
 
 $cb = new Backcall;
 
-if($_POST['phone']) {
+if($_SERVER['REQUEST_METHOD'] == "POST") {
     $q = trim($_POST['phone']);
     $send = $cb->SendData($q);
 
