@@ -6,8 +6,8 @@ $httpState = '';
 
 $cb = new Backcall;
 
-if($_GET['phone']) {
-    $q = trim($_GET['phone']);
+if($_POST['phone']) {
+    $q = trim($_POST['phone']);
     $send = $cb->SendData($q);
 
     if($send['type'] == 'success'){ $httpState = '200 OK'; }
