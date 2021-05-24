@@ -39,7 +39,7 @@ const CBFSend = (e,t) => {
         $('#callback-lightbox > .lb main form div input, #callback-lightbox > .lb main form div button'),
         $('#callback-lightbox > .lb main form div input')
     ],
-        query = $('#callback-lightbox > .lb main form').serializeArray();
+        query = {phone: $('phone').val()};
 
     console.log("Ready:" + $('#callback-lightbox > .lb main form').attr('method'));
     console.log("Ready:" + $('#callback-lightbox > .lb main form').attr('action'));
