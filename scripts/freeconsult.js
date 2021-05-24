@@ -9,6 +9,6 @@ const StartSend = (e, t) => {
 const FCSend = (e,t) => {
     
 
-    e.preventDefault();
+    return false;
 
 }
